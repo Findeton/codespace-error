@@ -9,6 +9,7 @@
 
 	"userEnvProbe": "loginShell",
 	"updateRemoteUserUID": true,
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 
 	// Adding host requirements so that there is no need to manually select the
 	// machine to run on all the time
