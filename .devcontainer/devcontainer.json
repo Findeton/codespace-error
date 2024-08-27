@@ -1,0 +1,28 @@
+// SPDX-FileCopyrightText: 2023-2024 Eduardo Robles <edu@sequentech.io>
+//
+// SPDX-License-Identifier: AGPL-3.0-only
+
+{
+	"name": "step",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "devcontainer",
+
+	"userEnvProbe": "loginShell",
+	"updateRemoteUserUID": true,
+
+	// Adding host requirements so that there is no need to manually select the
+	// machine to run on all the time
+	"hostRequirements": {
+		"storage": "40gb",
+		"cpus": 4
+	},
+
+	"features": {
+		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+		"ghcr.io/devcontainers/features/sshd:1": {
+            "version": "latest"
+        }
+	},
+	"customizations": {
+	}
+}
